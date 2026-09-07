@@ -1,0 +1,80 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+    background-color: #F9F8F6;
+    color: #1A1A1A;
+  }
+
+  .dark body {
+    background-color: #121212;
+    color: #F3F3F3;
+  }
+
+  .font-japanese {
+    font-family: 'Noto Sans JP', 'M PLUS Rounded 1c', 'Hiragino Kaku Gothic ProN', Meiryo, sans-serif;
+  }
+}
+
+/* Bento Theme Accent Variables & Helpers */
+:root {
+  --bento-bg: #F9F8F6;
+  --bento-card: #FFFFFF;
+  --bento-border: #E5E7EB;
+  --bento-crimson: #BC002D;
+  --bento-dark-card: #1A1A1A;
+}
+
+/* Ruby / Furigana helper styling */
+ruby {
+  ruby-position: over;
+  ruby-align: center;
+}
+
+rt {
+  font-size: 0.65em;
+  color: #BC002D;
+  user-select: none;
+  font-weight: 600;
+  letter-spacing: normal;
+}
+
+.dark rt {
+  color: #FF5A79;
+}
+
+/* Custom smooth scrollbar */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(156, 163, 175, 0.4);
+  border-radius: 9999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Kana canvas styling */
+.canvas-grid {
+  background-size: 20px 20px;
+  background-image: 
+    linear-gradient(to right, rgba(229, 231, 235, 0.8) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(229, 231, 235, 0.8) 1px, transparent 1px);
+}
+
+.dark .canvas-grid {
+  background-image: 
+    linear-gradient(to right, rgba(255, 255, 255, 0.08) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.08) 1px, transparent 1px);
+}
+
+
